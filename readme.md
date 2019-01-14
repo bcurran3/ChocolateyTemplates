@@ -1,3 +1,5 @@
+<body bgcolor="#4CBE45">
+
 These are the templates I routinely copy and edit for creating new Chocolatey packages.
 
 * 01/14/2019 - they're out of date and need updating
