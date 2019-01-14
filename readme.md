@@ -1,4 +1,3 @@
-<body bgcolor="#4CBE45">
 
 These are the templates I routinely copy and edit for creating new Chocolatey packages.
 
