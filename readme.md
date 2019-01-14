@@ -4,7 +4,7 @@ These are the templates I routinely copy and edit for creating new Chocolatey pa
 
 ***
 
-Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
+Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [450+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 <h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
@@ -23,10 +23,11 @@ If applicable, please always consider donating or purchasing the software you in
 
 ***
 
-<h1>Yes, I package requests.</h1>
+<h1>Yes, I package requests!</h1>
 
 <h2>SPECIALTIES / TOP PRIORITY:</h2>
 
+* **Corporate packaging for hire.**
 * Everything and anything I use!
 * Technician Tools: Admin Tools, Diagnostic Tools, Network Tools, Security Tools, System Management, etc.
 * BIG guys: Amazon, Dell, Google, HP, Intel, Microsoft, NETGEAR
