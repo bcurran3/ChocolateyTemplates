@@ -1,10 +1,11 @@
-﻿http://win7gadgets.com/media/g/g1345/virus-blue-wifi.gadget
+﻿# http://win7gadgets.com/media/g/g1345/virus-blue-wifi.gadget
 
 $ErrorActionPreference = 'Stop'
 $packageName      = '-gadget' 
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url              = ''
 $checksum         = ''
+$checksumType     = 'sha256'
 $installerPackage = Join-Path $ToolsDir ".gadget"
 
 $packageArgs = @{
@@ -13,7 +14,7 @@ $packageArgs = @{
   url           = $url
   FileFullPath  = $installerPackage
   checksum      = $checksum
-  checksumType  = 'sha256'
+  checksumType  = $checksumType
 }
 
 Get-ChocolateyWebFile @packageArgs

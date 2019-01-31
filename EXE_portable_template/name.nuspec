@@ -3,26 +3,27 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id></id>
-    <version></version>
-    <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>		
-    <title> (Install)</title>
+    <version></version>	
+    <owners>bcurran3</owners>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>	
+    <title></title>
     <authors></authors>
-    <projectUrl></projectUrl>
-    <copyright></copyright>
-	<licenseUrl></licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<projectSourceUrl></projectSourceUrl>
-    <docsUrl></docsUrl>
-	<mailingListUrl></mailingListUrl>
+    <projectUrl></projectUrl>	
+    <iconUrl></iconUrl>	
+    <copyright></copyright>	
+    <licenseUrl></licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>	
+    <projectSourceUrl></projectSourceUrl>	
+    <docsUrl></docsUrl>	
+    <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>
-    <tags> </tags>
+    <tags> portable</tags>
     <summary></summary>
     <description>
 ![Screenshot of ]()
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master//readme.md)**
-	</description>
+    </description>
     <releaseNotes></releaseNotes>
   </metadata>
   <files>

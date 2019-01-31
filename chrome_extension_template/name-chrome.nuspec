@@ -1,27 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>-plex</id>
+    <id>-chrome</id>
     <version></version>
+    <title>for Chrome</title>
+    <authors></authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>		
-    <title> for Plex</title>
-    <authors></authors>
     <projectUrl></projectUrl>
+    <bugTrackerUrl></bugTrackerUrl>	
+    <iconUrl></iconUrl>
+    <licenseUrl></licenseUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<licenseUrl></licenseUrl>
-    <projectSourceUrl></projectSourceUrl>
-    <docsUrl></docsUrl>
-    <bugTrackerUrl></bugTrackerUrl>
-    <tags> plex</tags>
-    <summary></summary>
     <description>
-
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master//readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <summary></summary>
+    <tags>chrome extension</tags>
+    <releaseNotes></releaseNotes>	
     <dependencies>
-      <dependency id="plexmediaserver" />
+      <dependency id="googlechrome" />
     </dependencies>
   </metadata>
   <files>
