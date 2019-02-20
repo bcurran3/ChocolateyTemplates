@@ -45,5 +45,6 @@ If (Test-Path $strFileName){
     Write-Host "  ** No previous version exists." -Foreground Magenta
    }
 
-Rename-Item "$UnZipDir\$BundleName-x.x.x" $BundleName
+# NOTE: $env:packageVersion and bundle version could be different on reissues of same version.
+Rename-Item "$UnZipDir\$BundleName-$env:packageVersion" $BundleName
 Write-Host "  ** You can ignore the ""Only an exit code of non-zero will fail..."" messages." -Foreground Magenta
