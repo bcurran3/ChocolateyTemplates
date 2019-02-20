@@ -3,20 +3,31 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>-plex</id>
+    <title> for Plex</title>
     <version></version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>
-    <title> for Plex</title>
     <authors></authors>
     <projectUrl></projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl></licenseUrl>
     <projectSourceUrl></projectSourceUrl>
+    <iconUrl></iconUrl>
     <docsUrl></docsUrl>
+    <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>
-    <tags> plex</tags>
+    <copyright></copyright>
+    <licenseUrl></licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags> plex bundle</tags>
     <summary></summary>
-    <description></description>
+    <description>
+![Screenshot of ]()
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/REPLACEME/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="plexmediaserver" />
