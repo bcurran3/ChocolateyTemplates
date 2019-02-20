@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName  = '' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$packageName  = '' 
 $url          = ''
 $checksum     = ''
 $shortcutName = '.lnk'
@@ -18,5 +18,5 @@ $packageArgs = @{
  
 Get-ChocolateyWebFile @packageArgs
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"

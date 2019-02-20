@@ -1,44 +1,49 @@
-﻿$packageName      = '-plex' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName      = '-plex'
 $BundleName       = '.bundle'
 $url              = ''
-$LocalAppDataPath = Get-ItemProperty -path "registry::hkey_current_user\software\Plex, Inc.\Plex Media Server" | select-object -expandproperty LocalAppDataPath
+$checksum         = ''
+$LocalAppDataPath = Get-ItemProperty -Path "registry::hkey_current_user\software\Plex, Inc.\Plex Media Server" | Select-Object -ExpandProperty LocalAppDataPath
 
 if ($LocalAppDataPath -eq $null) {
-   Write-Host "Plex Media Server has not been configured yet!" -ForegroundColor red -BackgroundColor blue
-   Write-Host "Creating default directories..." -ForegroundColor green -BackgroundColor blue
-   New-Item "$env:LOCALAPPDATA\Plex" -Type Directory -force
-   New-Item "$env:LOCALAPPDATA\Plex\Plex Media Server" -Type Directory -force
-   New-Item "$env:LOCALAPPDATA\Plex\Plex Media Server\Plug-ins" -Type Directory -force
-   $LocalAppDataPath = "$env:LOCALAPPDATA\Plex"
-  }
-$UnZipDir         = Join-Path -Path $LocalAppDataPath -ChildPath "Plex Media Server\Plug-ins"
+    Write-Host "  ** Plex Media Server has not been configured yet!" -Foreground Magenta
+    Write-Host "  ** Creating default directories..." -Foreground Magenta
+    New-Item "$ENV:LOCALAPPDATA\Plex" -Type Directory -Force
+    New-Item "$ENV:LOCALAPPDATA\Plex\Plex Media Server" -Type Directory -Force
+    New-Item "$ENV:LOCALAPPDATA\Plex\Plex Media Server\Plug-ins" -Type Directory -Force
+    $LocalAppDataPath = "$ENV:LOCALAPPDATA\Plex"
+   }
+
+$UnZipDir = Join-Path -Path $LocalAppDataPath -ChildPath "Plex Media Server\Plug-ins"
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $UnZipDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = '66487922CC685E99E2C847415EFD350EEB954F438AADA1230E121BA791B9FA2A'
+  checksum      = $checksum
   checksumType  = 'sha256'  
 }
 
 Install-ChocolateyZipPackage @packageArgs
 
 $strFileName="$LocalAppDataPath\Plex Media Server\Plug-ins\$BundleName.old"
+
 If (Test-Path $strFileName){
-  Write-Host "Removing previous .old version." -ForegroundColor green -BackgroundColor blue
-  Remove-Item "$UnZipDir\$BundleName.old" -recurse
-}Else{
-  Write-Host ".old version does not exist." -ForegroundColor green -BackgroundColor blue
+    Write-Host "  ** Removing previous .old version." -Foreground Magenta
+    Remove-Item "$UnZipDir\$BundleName.old" -Recurse
+   }else{
+    Write-Host "  ** .old version does not exist." -Foreground Magenta
 }
 
 $strFileName="$LocalAppDataPath\Plex Media Server\Plug-ins\$BundleName"
+
 If (Test-Path $strFileName){
-  Write-Host "Renaming previous version .old." -ForegroundColor green -BackgroundColor blue
-  Rename-Item "$UnZipDir\$BundleName" "$BundleName.old"
-}Else{
-  Write-Host "No previous version exists." -ForegroundColor green -BackgroundColor blue
-}
+    Write-Host "  ** Renaming previous version .old." -Foreground Magenta
+    Rename-Item "$UnZipDir\$BundleName" "$BundleName.old"
+   }else{
+    Write-Host "  ** No previous version exists." -Foreground Magenta
+   }
 
 Rename-Item "$UnZipDir\$BundleName-x.x.x" $BundleName
-Write-Host "You can ignore Only an exit code of non-zero will fail... messages." -ForegroundColor green -BackgroundColor blue
+Write-Host "  ** You can ignore the ""Only an exit code of non-zero will fail..."" messages." -Foreground Magenta

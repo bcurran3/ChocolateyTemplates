@@ -1,23 +1,19 @@
-﻿$packageName    = ''
-$installerType  = 'exe'
+﻿$ErrorActionPreference = 'Stop'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$packageName    = ''
 $url            = ''
 $checksum       = ''
-$silentArgs     = '/S'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$validExitCodes = @(0,1)
-$softwareName   = ''
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir  
-  fileType      = $installerType
+  fileType      = 'EXE'
   url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = $softwareName
+  validExitCodes= @(0,1)
+  silentArgs    = '/S'
+  softwareName  = ''
   checksum      = $checksum
   checksumType  = 'sha256' 
 }
 
 Install-ChocolateyPackage @packageArgs
-

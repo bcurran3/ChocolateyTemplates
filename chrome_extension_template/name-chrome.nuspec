@@ -7,11 +7,11 @@
     <title>for Chrome</title>
     <authors></authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>
     <projectUrl></projectUrl>
-    <bugTrackerUrl></bugTrackerUrl>	
+    <bugTrackerUrl></bugTrackerUrl>
     <iconUrl></iconUrl>
-    <licenseUrl></licenseUrl>	
+    <licenseUrl></licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 	
@@ -19,7 +19,7 @@
 	</description>
     <summary></summary>
     <tags>chrome extension</tags>
-    <releaseNotes></releaseNotes>	
+    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>

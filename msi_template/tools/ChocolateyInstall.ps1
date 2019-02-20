@@ -1,21 +1,18 @@
-﻿$packageName    = ''
-$installerType  = 'msi'
+﻿$ErrorActionPreference = 'Stop'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$packageName    = ''
 $url            = '' 
 $checksum       = ''
-$silentArgs     = '/quiet /norestart'
-$validExitCodes = @(0, 3010, 1641)
 
 $packageArgs = @{
   packageName   = $packageName
-  fileType      = $installerType
+  fileType      = 'MSI'
   url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
+  validExitCodes= @(0, 3010, 1641)
+  silentArgs    = '/quiet /norestart'
   softwareName  = ''
   checksum      = $checksum
   checksumType  = 'sha256' 
 }
 
 Install-ChocolateyPackage @packageArgs  
-  

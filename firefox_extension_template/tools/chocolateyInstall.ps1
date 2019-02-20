@@ -1,12 +1,13 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName = '-firefox'
 $url         = ''
 $checksum    = ''
 $extensionID = ""
 
-if(test-path 'hklm:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
+if(Test-Path 'HKLM:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
 	$installDir = Get-Item -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs | Select-Object -ExpandProperty Property
 }
-if(test-path 'hklm:\SOFTWARE\Wow6432Node\Mozilla\Firefox\TaskBarIDs'){
+if(Test-Path 'HKLM:\SOFTWARE\Wow6432Node\Mozilla\Firefox\TaskBarIDs'){
 	$installDir = Get-Item -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Mozilla\Firefox\TaskBarIDs | Select-Object -ExpandProperty Property
 }
 
@@ -28,5 +29,5 @@ if (!(Test-Path $extFolder)) {
 	Install-ChocolateyZipPackage @packageArgs
 }
 else {
-	Write-Host "$packageName already exists"
+	Write-Host "  ** $packageName already exists" -Foreground Magenta
 }
